@@ -17,7 +17,7 @@ The project is implemented using the **Python** ecosystem with the following key
 * `matplotlib`: For static plotting and visualization.
 * `Dask`: For parallel computing and handling large datasets.
 
-## 👥 Project Team
+## 👥 Author
 **University of Science and Technology of Hanoi (USTH)** *Department of Space and Earth Sciences*
 | Name | Role | Student ID |
 | :--- | :--- | :--- |
@@ -27,12 +27,3 @@ The project is implemented using the **Python** ecosystem with the following key
 | **Nguyen Quang Nam** | Data Analysis & Validation | 2410682 |
 
 **Supervisor:** Dr. Nguyen Xuan Thanh
-
-## 📝 Usage
-You can run the toolbox directly in the browser via Google Colab without any installation:
-1.  Click the "Open In Colab" badge at the top of this README.
-2.  Connect to the runtime.
-3.  Upload your dataset (if required) or run the provided sample cells.
-
-## 📄 License
-Group Project - Fall 2025.
