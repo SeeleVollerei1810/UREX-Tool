@@ -19,11 +19,11 @@ The project is implemented using the **Python** ecosystem with the following key
 
 ## 👥 Author
 **University of Science and Technology of Hanoi (USTH)** *Department of Space and Earth Sciences*
-| Name | Role | Student ID |
-| :--- | :--- | :--- |
-| **Pham Minh Thu** | Leader, Simulation & Data Preprocessing | BA12-170 |
-| **Nguyen Ngoc Quan** | Core Dev (Heat stress & ETCCDI indices) | 22TA13002 |
-| **Le Van Ben** | Visualization & Mapping | 22BA12046 |
-| **Nguyen Quang Nam** | Data Analysis & Validation | 2410682 |
+| Name | Student ID |
+| :--- | :--- |
+| **Pham Minh Thu** | BA12-170 |
+| **Nguyen Ngoc Quan** | 22TA13002 |
+| **Le Van Ben** | 22BA12046 |
+| **Nguyen Quang Nam** | 2410682 |
 
 **Supervisor:** Dr. Nguyen Xuan Thanh
