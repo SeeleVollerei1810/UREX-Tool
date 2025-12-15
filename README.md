@@ -1,7 +1,5 @@
 # An Integrated Toolbox for Assessing and Enhancing Urban Resilience to Climate Extremes
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1wGxZVSp-t0lUrJ_8nTB3pLy-6DTU5HOR?usp=sharing)
-
 ## 📖 Introduction
 This project aims to develop an integrated computational toolbox to explore climate-biosphere feedback processes and assess urban resilience to climate extremes.
 
