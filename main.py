@@ -1,4 +1,4 @@
-from preoprocess import combine_preprocess
+from preprocess import combine_preprocess
 from utilities import save_indices_to_netcdf
 from indices import tinh_chi_so_khi_hau
 
