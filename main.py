@@ -1,1 +1,1 @@
-fform
+from input import
