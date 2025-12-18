@@ -13,16 +13,16 @@ The toolbox focuses on the following primary objectives:
 ## Technology Stack
 The project is implemented using the **Python** ecosystem with the following key libraries:
 ### Core Dependencies
-* **[Xarray](https://xarray.pydata.org/):** The backbone of the toolbox. Used for N-dimensional data manipulation, labeling, and climate index calculation.
-* **[NumPy](https://numpy.org/):** efficient numerical computation and array operations.
-* **[Pandas](https://pandas.pydata.org/):** Handles datetime indexing, time resampling ('YE'), and time-series logic underlying Xarray.
-* **[NetCDF4](https://unidata.github.io/netcdf4-python/):** The essential backend engine for reading and writing `.nc` climate data files.
+* **Xarray** The backbone of the toolbox. Used for N-dimensional data manipulation, labeling, and climate index calculation.
+* **NumPy** efficient numerical computation and array operations.
+* **Pandas** Handles datetime indexing, time resampling ('YE'), and time-series logic underlying Xarray.
+* **NetCDF4** The essential backend engine for reading and writing `.nc` climate data files.
 ### Standard Libraries & Utilities
 * **Typing:** Extensive use of Type Hints (`List`, `Dict`, `Tuple`, `Literal`) ensures code reliability and clarity.
 * **Pathlib / Glob:** Robust cross-platform file path handling and batch processing.
 * **Argparse:** Command-line argument parsing for flexible execution.
 
-## Configurable Parameters & Climate Indices
+## Climate Indices
 The toolbox computes a comprehensive set of **24 ETCCDI climate indices** covering temperature extremes, heatwaves, heavy rainfall, and drought durations.
 ### 1. Temperature Indices (11 Indices)
 | Index | Unit | Description | Threshold / Logic |
