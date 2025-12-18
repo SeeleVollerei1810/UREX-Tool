@@ -12,8 +12,7 @@ The toolbox focuses on the following primary objectives:
 
 ## Technology Stack
 The project is implemented using the **Python** ecosystem with the following key libraries:
-* `xarray`, `numpy`, `pandas`: For multi-dimensional data manipulation.
-* `Dask`: For parallel computing and handling large datasets.
+* `xarray`, `numpy`: For multi-dimensional data manipulation.
 
 ## Configurable Parameters & Climate Indices
 The toolbox computes a comprehensive set of **24 ETCCDI climate indices** covering temperature extremes, heatwaves, heavy rainfall, and drought durations.
