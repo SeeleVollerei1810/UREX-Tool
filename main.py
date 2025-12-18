@@ -2,7 +2,7 @@ import argparse
 from preprocess import combine_preprocess
 from utilities import save_indices_to_netcdf
 from indices import climate_index
-#main chính
+#main
 def main():
 #thamso cauhinh
     OUTPUT_DIR = '/content/drive/MyDrive/Group Project 2025/results' #link_save
