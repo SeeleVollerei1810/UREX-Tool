@@ -19,8 +19,8 @@ def save_indices_to_netcdf(ds_indices: xr.Dataset, output_filename: str, output_
 
     try:
         ds_indices.to_netcdf(output_path)
-        print(f"\n Save {len(ds_indices.data_vars)} Success indicators at: {output_path.resolve()}")
+        print("\n Save {len(ds_indices.data_vars)} Success indicators at: {output_path.resolve()}")
         return str(output_path.resolve())
     except Exception as e:
-        print(f" Error saving NetCDF file: {e}")
+        print(" Error saving NetCDF file: {e}")
         return None
