@@ -1,1 +1,0 @@
-cop input về collab
