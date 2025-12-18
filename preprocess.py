@@ -50,5 +50,4 @@ def combine_preprocess(ds: xr.Dataset, lat_range: Tuple[float, float], lon_range
     ds = spatial_subset(ds, lat_range, lon_range)
     ds = time_subset(ds)
     ds = handle_nan(ds, nan_method)
-    print(" Preprocessing completed..")
     return ds
