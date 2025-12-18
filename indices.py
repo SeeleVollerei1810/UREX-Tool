@@ -57,13 +57,12 @@ def R99p(pr: xr.DataArray) -> xr.DataArray:
     pr99 = pr_valid.where(pr_valid > _clean_coords(thr))
     return pr99.groupby('time.year').sum(dim='time', skipna=True)
 
-def tinh_chi_so_khi_hau(ds: xr.Dataset) -> xr.Dataset:
-    print("\n TÍNH TOÁN CHỈ SỐ KHÍ HẬU ")
-
+def climate_index(ds: xr.Dataset) -> xr.Dataset:
+    
     required_vars = ['tasmax', 'tasmin', 'tas', 'pr']
     if not all(v in ds.data_vars for v in required_vars):
         missing = [v for v in required_vars if v not in ds.data_vars]
-        raise ValueError(f"Thiếu các biến bắt buộc trong Dataset: {missing}")
+        raise ValueError(f"Required variables are missing from the Dataset: {missing}")
 
     tasmax, tasmin, tas, pr = ds['tasmax'], ds['tasmin'], ds['tas'], ds['pr']
     results: Dict[str, Union[xr.DataArray, xr.Dataset]] = {}
@@ -87,9 +86,6 @@ def tinh_chi_so_khi_hau(ds: xr.Dataset) -> xr.Dataset:
         if name in INDEX_INFO:
             da.name = name
             da.attrs.update(INDEX_INFO[name])
-
-    if 'time' in ds_annual_indices.coords:
-        print("The 'time' dimension already exists, no need to change its name.")
     else:
         if 'year' in ds_annual_indices.dims:
             ds_annual_indices = ds_annual_indices.rename({'year': 'time'})
