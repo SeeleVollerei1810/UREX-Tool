@@ -35,9 +35,9 @@ The toolbox computes a comprehensive set of **24 ETCCDI climate indices** coveri
 | **`TNn`** | **°C** | Annual minimum of daily minimum temperature | Absolute Min |
 | **`Tmean`**| **°C** | Annual Mean surface air temperature | Mean Value |
 | **`DTR`** | **°C** | Mean daily temperature range | Tmax - Tmin |
-| **`SU25`** | **Days** | Number of **Summer Days** | Tmax > **25°C** |
-| **`TR20`** | **Days** | Number of **Tropical Nights** | Tmin > **20°C** |
-| **`FDD`** | **Days** | Frost days (Cold stress) | Tmin ≤ **0°C** |
+| **`SU25`** | **Days** | Number of Summer Days | Tmax > 25°C |
+| **`TR20`** | **Days** | Number of Tropical Nights | Tmin > 20°C |
+| **`FDD`** | **Days** | Frost days (Cold stress) | Tmin ≤ 0°C |
 | **`WSDI`** | **Days** | Warm Spell Duration Index | Heatwave Duration |
 | **`CSDI`** | **Days** | Cold Spell Duration Index | Cold Spell Duration |
 ### 3. Precipitation Indices (13 Indices)
@@ -48,14 +48,14 @@ The toolbox computes a comprehensive set of **24 ETCCDI climate indices** coveri
 | **`SDII`** | **mm/day**| Simple Daily Intensity Index | Rain rate / Wet days |
 | **`PRCPTOT`**| **mm** | Annual total wet-day precipitation | Total Rain (>1mm) |
 | **`RRR`** | **mm** | Annual total precipitation in the wettest period | Wettest Period |
-| **`R95p`** | **mm** | Precipitation above **95th percentile** | Very Wet Days |
-| **`R99p`** | **mm** | Precipitation above **99th percentile** | Extremely Wet Days |
-| **`CWD`** | **Days** | Consecutive **Wet Days** | Duration (Wet) |
-| **`CDD`** | **Days** | Consecutive **Dry Days** | Duration (Dry) |
-| **`R1mm`** | **Days** | Number of wet days (Rain ≥ 1mm) | P ≥ **1mm** |
-| **`R10mm`** | **Days** | Number of heavy precipitation days | P ≥ **10mm** |
-| **`R20mm`** | **Days** | Number of very heavy precipitation days | P ≥ **20mm** |
-| **`R50mm`** | **Days** | Number of violent precipitation days | P ≥ **50mm** |
+| **`R95p`** | **mm** | Precipitation above 95th percentile | Very Wet Days |
+| **`R99p`** | **mm** | Precipitation above 99th percentile | Extremely Wet Days |
+| **`CWD`** | **Days** | Consecutive Wet Days | Duration (Wet) |
+| **`CDD`** | **Days** | Consecutive Dry Days | Duration (Dry) |
+| **`R1mm`** | **Days** | Number of wet days (Rain ≥ 1mm) | P ≥ 1mm |
+| **`R10mm`** | **Days** | Number of heavy precipitation days | P ≥ 10mm |
+| **`R20mm`** | **Days** | Number of very heavy precipitation days | P ≥ 20mm |
+| **`R50mm`** | **Days** | Number of violent precipitation days | P ≥ 50mm |
 
 ## 👥 Author
 **University of Science and Technology of Hanoi (USTH)** *Department of Space and Earth Sciences*
