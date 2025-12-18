@@ -13,10 +13,10 @@ The toolbox focuses on the following primary objectives:
 ## Technology Stack
 The project is implemented using the **Python** ecosystem with the following key libraries:
 ### Core Dependencies
-* **Xarray** The backbone of the toolbox. Used for N-dimensional data manipulation, labeling, and climate index calculation.
-* **NumPy** efficient numerical computation and array operations.
-* **Pandas** Handles datetime indexing, time resampling ('YE'), and time-series logic underlying Xarray.
-* **NetCDF4** The essential backend engine for reading and writing `.nc` climate data files.
+* **Xarray:** The backbone of the toolbox. Used for N-dimensional data manipulation, labeling, and climate index calculation.
+* **NumPy:** Efficient numerical computation and array operations.
+* **Pandas:** Handles datetime indexing, time resampling ('YE'), and time-series logic underlying Xarray.
+* **NetCDF4:** The essential backend engine for reading and writing `.nc` climate data files.
 ### Standard Libraries & Utilities
 * **Typing:** Extensive use of Type Hints (`List`, `Dict`, `Tuple`, `Literal`) ensures code reliability and clarity.
 * **Pathlib / Glob:** Robust cross-platform file path handling and batch processing.
