@@ -119,7 +119,6 @@ def FDD(tasmin: xr.DataArray) -> xr.DataArray:
 def R50mm(pr: xr.DataArray) -> xr.DataArray:
     return (pr >= 50).groupby("time.year").sum(dim="time", skipna=True)
 
-# Hàm tổng hợp tính tất cả các chỉ số
 def climate_index(ds: xr.Dataset) -> xr.Dataset:
     required_vars = ['tasmax', 'tasmin', 'tas', 'pr']
     if not all(v in ds.data_vars for v in required_vars):
@@ -129,7 +128,6 @@ def climate_index(ds: xr.Dataset) -> xr.Dataset:
     tasmax, tasmin, tas, pr = ds['tasmax'], ds['tasmin'], ds['tas'], ds['pr']
     results: Dict[str, Union[xr.DataArray, xr.Dataset]] = {}
 
-    # Tính tất cả các chỉ số khí hậu
     results["TXx"] = _clean_coords(TXx(tasmax))
     results["TXn"] = _clean_coords(TXn(tasmax))
     results["TNx"] = _clean_coords(TNx(tasmin))
