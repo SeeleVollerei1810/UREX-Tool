@@ -1,9 +1,13 @@
+import argparse
+from preprocess import combine_preprocess
+from utilities import save_indices_to_netcdf
+from indices import climate_index
 #main chính
 def main():
 #thamso cauhinh
     OUTPUT_DIR = '/content/drive/MyDrive/Group Project 2025/results' #link_save
     LAT_RANGE = (8.0, 24.0) # (dang lam Vietnam)
-    LON_RANGE = (102.0, 110.0) 
+    LON_RANGE = (102.0, 110.0)
     NAN_METHOD: Literal['keep'] = 'keep'
 
 #load_data
@@ -18,7 +22,7 @@ def main():
     )
 
 #indices
-    annual_indices_ds = tinh_chi_so_khi_hau(processed_data)  
+    annual_indices_ds = climate_index(processed_data)
 
  #save
     save_indices_to_netcdf(
