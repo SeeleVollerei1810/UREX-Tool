@@ -18,32 +18,44 @@ The project is implemented using the **Python** ecosystem with the following key
 * `Dask`: For parallel computing and handling large datasets.
 
 ## ⚙️ Configurable Parameters & Climate Indices
-The toolbox computes a comprehensive set of **12 ETCCDI climate indices** to assess urban resilience. Below are the definitions and configuration thresholds currently implemented in the core modules.
+The toolbox computes a comprehensive set of **24 ETCCDI climate indices** covering temperature extremes, heatwaves, heavy rainfall, and drought durations.
 ### 1. General Configuration
-| Parameter | Location | Description | Default Value |
+| Parameter | Description | Default Value |
+| :--- | :--- | :--- |
+| `START_YEAR` | Start year for the analysis window | `1961` |
+| `END_YEAR` | End year for the analysis window | `2023` |
+| `lat_range` | Latitude bounds (Min, Max) | `(8, 24)` |
+| `lon_range` | Longitude bounds (Min, Max) | `(102, 110)` |
+### 2. Temperature Indices (11 Indices)
+| Index | Unit | Description | Threshold / Logic |
 | :--- | :--- | :--- | :--- |
-| `START_YEAR` | `io.py` | Start year for the analysis window | `1961` |
-| `END_YEAR` | `io.py` | End year for the analysis window | `2023` |
-| `lat_range` | `main.ipynb`| Latitude bounds (Min, Max) for the study area | `(8, 24)` |
-| `lon_range` | `main.ipynb`| Longitude bounds (Min, Max) for the study area | `(102, 110)` |
-### 2. Temperature Indices (Heat Stress)
-| Parameter | Unit | Category | Description | Threshold / Logic |
-| :--- | :--- | :--- | :--- | :--- |
-| **`TXx`** | **°C** | Extreme Heat | Annual maximum of daily maximum temperature | Absolute Max (°C) |
-| **`TNn`** | **°C** | Extreme Cold | Annual minimum of daily minimum temperature | Absolute Min (°C) |
-| **`SU25`** | **Days** | Heatwave | Number of **Summer Days** per year | Tmax > **25°C** |
-| **`TR20`** | **Days** | Heatwave | Number of **Tropical Nights** per year | Tmin > **20°C** |
-| **`DTR`** | **°C** | Variability | Diurnal Temperature Range (Daily Tmax - Tmin) | Daily Difference |
-| **`Tmean`** | **°C** | General | Annual Mean Temperature | Mean (°C) |
-### 3. Precipitation Indices (Flooding Risk)
-| Parameter | Unit | Category | Description | Threshold / Logic |
-| :--- | :--- | :--- | :--- | :--- |
-| **`Rx1day`** | **mm** | Intensity | Maximum 1-day precipitation amount | Absolute Max (mm) |
-| **`Rx5day`** | **mm** | Intensity | Maximum 5-day consecutive precipitation | Absolute Max (mm) |
-| **`SDII`** | **mm/day** | Intensity | Simple Daily Intensity Index (Rain rate on wet days) | PRCPTOT / Wet Days |
-| **`R95p`** | **mm** | Extreme Rain | Very wet days precipitation total | > **95th percentile** |
-| **`R99p`** | **mm** | Extreme Rain | Extremely wet days precipitation total | > **99th percentile** |
-| **`PRCPTOT`** | **mm** | Availability | Annual total precipitation from wet days | Daily Rain > **1mm** |
+| **`TXx`** | **°C** | Annual maximum of daily maximum temperature | Absolute Max |
+| **`TXn`** | **°C** | Annual minimum of daily maximum temperature | Min of Max |
+| **`TNx`** | **°C** | Annual maximum of daily minimum temperature | Max of Min |
+| **`TNn`** | **°C** | Annual minimum of daily minimum temperature | Absolute Min |
+| **`Tmean`**| **°C** | Annual Mean surface air temperature | Mean Value |
+| **`DTR`** | **°C** | Mean daily temperature range | Tmax - Tmin |
+| **`SU25`** | **Days** | Number of **Summer Days** | Tmax > **25°C** |
+| **`TR20`** | **Days** | Number of **Tropical Nights** | Tmin > **20°C** |
+| **`FDD`** | **Days** | Frost days (Cold stress) | Tmin ≤ **0°C** |
+| **`WSDI`** | **Days** | Warm Spell Duration Index | Heatwave Duration |
+| **`CSDI`** | **Days** | Cold Spell Duration Index | Cold Spell Duration |
+### 3. Precipitation Indices (13 Indices)
+| Index | Unit | Description | Threshold / Logic |
+| :--- | :--- | :--- | :--- |
+| **`Rx1day`** | **mm** | Annual maximum 1-day precipitation | Max 1-day rain |
+| **`Rx5day`** | **mm** | Annual maximum consecutive 5-day precipitation | Max 5-day rain |
+| **`SDII`** | **mm/day**| Simple Daily Intensity Index | Rain rate / Wet days |
+| **`PRCPTOT`**| **mm** | Annual total wet-day precipitation | Total Rain (>1mm) |
+| **`RRR`** | **mm** | Annual total precipitation in the wettest period | Wettest Period |
+| **`R95p`** | **mm** | Precipitation above **95th percentile** | Very Wet Days |
+| **`R99p`** | **mm** | Precipitation above **99th percentile** | Extremely Wet Days |
+| **`CWD`** | **Days** | Consecutive **Wet Days** | Duration (Wet) |
+| **`CDD`** | **Days** | Consecutive **Dry Days** | Duration (Dry) |
+| **`R1mm`** | **Days** | Number of wet days (Rain ≥ 1mm) | P ≥ **1mm** |
+| **`R10mm`** | **Days** | Number of heavy precipitation days | P ≥ **10mm** |
+| **`R20mm`** | **Days** | Number of very heavy precipitation days | P ≥ **20mm** |
+| **`R50mm`** | **Days** | Number of violent precipitation days | P ≥ **50mm** |
 
 ## 👥 Author
 **University of Science and Technology of Hanoi (USTH)** *Department of Space and Earth Sciences*
