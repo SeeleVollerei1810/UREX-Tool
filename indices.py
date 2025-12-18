@@ -164,3 +164,4 @@ def climate_index(ds: xr.Dataset) -> xr.Dataset:
 
     print("ETCCDI indices calculation completed.")
     return ds_annual_indices
+    
