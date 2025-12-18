@@ -87,12 +87,12 @@ def climate_index(ds: xr.Dataset) -> xr.Dataset:
             da.name = name
             da.attrs.update(INDEX_INFO[name])
     else:
-        if 'year' in ds_annual_indices.dims:
-        if 'time' not in ds_annual_indices.dims: # Chỉ đổi tên nếu 'time' chưa tồn tại
+          if 'year' in ds_annual_indices.dims:
+        if 'time' not in ds_annual_indices.dims: # THÊM DÒNG NÀY ĐỂ KIỂM TRA
             ds_annual_indices = ds_annual_indices.rename({'year': 'time'})
             print("The dimension 'year' has been renamed to 'time'.")
         else:
-            print("Warning: 'time' dimension already exists. Skipping rename of 'year' to 'time'.")
+            print("Cảnh báo: Chiều 'time' đã tồn tại. Bỏ qua việc đổi tên 'year' thành 'time' để tránh xung đột.")
             
     print("ETCCDI indices calculation completed.")
 
