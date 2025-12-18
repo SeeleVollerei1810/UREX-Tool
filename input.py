@@ -3,10 +3,6 @@ from pathlib import Path
 import os
 import glob
 
-def get_drive_data_path() -> str:
-    default_path = '/content/drive/MyDrive/Group Project 2025/data/'
-    return default_path
-
 def load_all_datasets_dynamically():
     base_path = get_drive_data_path()  
     nc_files = glob.glob(os.path.join(base_path, '*.nc'))
