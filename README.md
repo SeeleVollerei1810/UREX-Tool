@@ -14,20 +14,20 @@ First, clone the repository to your local machine or Google Colab environment:
 
 ## Key Features
 The toolbox focuses on the following primary objectives:
-* **Climate Extreme Indicators (ETCCDI):** Computing indices such as `TXx`, `TNn`, `R95p`, and `PRCPTOT` to assess long-term temperature and rainfall trends.
-* **Heat-Stress Metrics:** Calculating human heat exposure metrics like Wet-Bulb Temperature (`Tw`) and Wet-Bulb Globe Temperature (`WBGT`).
+- **Climate Extreme Indicators (ETCCDI):** Computing indices such as `TXx`, `TNn`, `R95p`, and `PRCPTOT` to assess long-term temperature and rainfall trends.
+- **Heat-Stress Metrics:** Calculating human heat exposure metrics like Wet-Bulb Temperature (`Tw`) and Wet-Bulb Globe Temperature (`WBGT`).
 
 ## Technology Stack
 The project is implemented using the **Python** ecosystem with the following key libraries:
 ### Core Dependencies
-* **Xarray:** The backbone of the toolbox. Used for N-dimensional data manipulation, labeling, and climate index calculation.
-* **NumPy:** Efficient numerical computation and array operations.
-* **Pandas:** Handles datetime indexing, time resampling ('YE'), and time-series logic underlying Xarray.
-* **NetCDF4:** The essential backend engine for reading and writing `.nc` climate data files.
+- **Xarray:** The backbone of the toolbox. Used for N-dimensional data manipulation, labeling, and climate index calculation.
+- **NumPy:** Efficient numerical computation and array operations.
+- **Pandas:** Handles datetime indexing, time resampling ('YE'), and time-series logic underlying Xarray.
+- **NetCDF4:** The essential backend engine for reading and writing `.nc` climate data files.
 ### Standard Libraries & Utilities
-* **Typing:** Extensive use of Type Hints (`List`, `Dict`, `Tuple`, `Literal`) ensures code reliability and clarity.
-* **Pathlib / Glob:** Robust cross-platform file path handling and batch processing.
-* **Argparse:** Command-line argument parsing for flexible execution.
+- **Typing:** Extensive use of Type Hints (`List`, `Dict`, `Tuple`, `Literal`) ensures code reliability and clarity.
+- **Pathlib / Glob:** Robust cross-platform file path handling and batch processing.
+- **Argparse:** Command-line argument parsing for flexible execution.
 
 ## Climate Indices
 The toolbox computes a comprehensive set of **24 ETCCDI climate indices** covering temperature extremes, heatwaves, heavy rainfall, and drought durations.
