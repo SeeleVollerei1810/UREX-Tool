@@ -5,8 +5,10 @@ This project aims to develop an integrated computational toolbox to explore clim
 
 In the context of rapid urbanization and global warming, this toolbox provides a workflow to process climate data, compute extreme indicators, and visualize risks associated with heat stress and extreme rainfall.
 
-## How to run
-1. Clone the Git
+## How to Run
+1. Clone the Git using "!git clone https://github.com/SeeleVollerei1810/Group_Project_2025.git"
+2. CD to the folder using "%cd Group_Project_2025"
+3. 
 
 ## Key Features
 The toolbox focuses on the following primary objectives:
