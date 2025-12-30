@@ -19,9 +19,11 @@ Before running, you must update the file paths and study area parameters to matc
 - **Step 1: Set Data Path**
     - Open Input.ipynb (or input.py) and locate the get_drive_data_path function.
     - Change the default_path to the folder containing your .nc files:
+```
 def get_drive_data_path() -> str:
     default_path = '/content/drive/MyDrive/Group Project 2025/data/' -> CHANGE THIS to your actual data folder path
     return default_path
+```
 
 ## Key Features
 The toolbox focuses on the following primary objectives:
