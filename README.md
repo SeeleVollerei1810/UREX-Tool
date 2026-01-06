@@ -6,7 +6,7 @@ This project aims to develop an integrated computational toolbox to explore clim
 In the context of rapid urbanization and global warming, this toolbox provides a workflow to process climate data, compute extreme indicators, and visualize risks associated with heat stress and extreme rainfall.
 
 ## How to Run
-Follow these steps to set up the environment, configure your data, and run the simulation.
+Follow these steps to set up the environment, configure your data, and obtain the results.
 ### 1. Installation
 First, clone the repository to your local machine or Google Colab environment:
 - git clone https://github.com/SeeleVollerei1810/Group_Project_2025.git
