@@ -7,6 +7,14 @@ import matplotlib.colors as mcolors
 file_path = '/content/drive/MyDrive/Group Project 2025/results/calculated_indices.nc'
 fh = Dataset(file_path, 'r')
 
+print(fh.file_format)
+print(fh.dimensions.keys())
+print(fh.dimensions['time'])
+print(fh.variables.keys())
+print(fh.Conventions)
+for attr in fh.ncattrs():
+    print(attr, '=', getattr(fh,attr))
+
 lat = fh.variables['lat'][:]
 lon = fh.variables['lon'][:]
 time_var = fh.variables['time']
