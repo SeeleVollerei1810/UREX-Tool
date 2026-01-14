@@ -45,10 +45,9 @@ ax1.set_ylim(8, 23.5)
 # --- SUBPLOT 2: MULTI-YEAR FREQUENCY DISTRIBUTION (HISTOGRAM) ---
 ax2 = fig.add_subplot(1, 2, 2)
 
-# Select years for comparison (First, Middle, Last)
 unique_years = np.unique(years)
 years_to_plot = [unique_years[0], unique_years[len(unique_years)//2], unique_years[-1]]
-colors = ['#1f77b4', '#2ca02c', '#d62728'] # Blue, Green, Red
+colors = ['#1f77b4', '#2ca02c', '#d62728']
 
 for year, color in zip(years_to_plot, colors):
     year_idx = np.where(years == year)[0]
