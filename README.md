@@ -53,8 +53,8 @@ The project is implemented using the **Python** ecosystem with the following key
 - **Pathlib / Glob:** Robust cross-platform file path handling and batch processing.
 - **Argparse:** Command-line argument parsing for flexible execution.
 
-## Climate Indices
-The toolbox computes a comprehensive set of **24 ETCCDI climate indices** covering temperature extremes, heatwaves, heavy rainfall, and drought durations.
+## Indices
+The toolbox computes a comprehensive set of **24 ETCCDI climate indices** and **2 Heat stress metrics** covering temperature extremes, heatwaves, heavy rainfall, drought durations and human heat stress.
 ### 1. Temperature Indices (11 Indices)
 | Index | Unit | Description | Threshold / Logic |
 | :--- | :--- | :--- | :--- |
@@ -85,6 +85,11 @@ The toolbox computes a comprehensive set of **24 ETCCDI climate indices** coveri
 | **`R10mm`** | **Days** | Number of heavy precipitation days | P ≥ 10mm |
 | **`R20mm`** | **Days** | Number of very heavy precipitation days | P ≥ 20mm |
 | **`R50mm`** | **Days** | Number of violent precipitation days | P ≥ 50mm |
+### 3. Heat-Stress Metrics (2 Indices)
+| Index | Unit | Description | Threshold / Logic |
+| :--- | :--- | :--- | :--- |
+| **`Tw`** | **°C** | Wet-bulb Temperature | f(Temp, Humidity, Pressure) |
+| **`WBGT`** | **°C** | Wet-Bulb Globe Temperature | ISO Heat Stress Standard |
 
 ## Author
 **University of Science and Technology of Hanoi (USTH)** *Department of Space and Earth Sciences*
