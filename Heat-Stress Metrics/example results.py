@@ -30,6 +30,7 @@ fig = plt.figure(figsize=(16, 10))
 # --- SUBPLOT 1: SPATIAL DISTRIBUTION MAP ---
 ax1 = fig.add_subplot(1, 2, 1)
 
+# For WBGT, we set vmin/vmax to 20-35°C
 plot = ax1.pcolormesh(lon, lat, heat_mean, cmap='RdYlBu_r', shading='auto', vmin=20, vmax=35)
 
 cbar = fig.colorbar(plot, ax=ax1, label='WBGT Index (°C)', extend='both', shrink=0.7)
