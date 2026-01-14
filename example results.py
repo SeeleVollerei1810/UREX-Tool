@@ -10,7 +10,7 @@ fh = Dataset(file_path, 'r')
 lat = fh.variables['lat'][:]
 lon = fh.variables['lon'][:]
 time_var = fh.variables['time']
-tnn_data = fh.variables['TNn'][:]  # Shape (time, lat, lon)
+tnn_data = fh.variables['TNn'][:]
 
 d_times = nc.num2date(time_var[:], time_var.units)
 years = np.array([d.year for d in d_times])
