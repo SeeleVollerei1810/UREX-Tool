@@ -5,7 +5,7 @@ from indices import climate_index
 
 def main():
     OUTPUT_DIR = '/content/drive/MyDrive/Group Project 2025/results' #link_save
-    LAT_RANGE = (8.0, 24.0) # (dang lam Vietnam)
+    LAT_RANGE = (8.0, 24.0) # (currently Vietnam)
     LON_RANGE = (102.0, 110.0)
     NAN_METHOD: Literal['keep'] = 'keep'
 
