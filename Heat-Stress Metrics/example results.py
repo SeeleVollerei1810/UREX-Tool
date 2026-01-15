@@ -1,8 +1,10 @@
+import xarray as xr
 import numpy as np
 import netCDF4 as nc
 from netCDF4 import Dataset
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
+import warnings
 
 file_path = '/content/drive/MyDrive/Group Project 2025/results/calculated_heatstress.nc'
 plot_existing_tw_analysis(file_path)
