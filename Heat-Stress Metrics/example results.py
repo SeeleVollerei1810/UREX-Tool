@@ -38,6 +38,8 @@ def plot_existing_wbgt_analysis(file_path: str):
     risk_level = risk_level.where(~np.isnan(wbgt_data))
 
     fig = plt.figure(figsize=(15, 8))
+
+    # --- SUBPLOT 1: HEAT RISK MAP (White background for ocean) ---
     ax1 = fig.add_subplot(1, 2, 1)
     risk_map_data = risk_level.mean(dim='time')
 
@@ -62,14 +64,14 @@ def plot_existing_wbgt_analysis(file_path: str):
     ax1.set_xlim(102, 109.5)
     ax1.set_ylim(8, 23.5)
 
+    # --- SUBPLOT 2: Tw FREQUENCY DISTRIBUTION (HISTOGRAM) ---
     ax2 = fig.add_subplot(1, 2, 2)
 
     unique_years = np.unique(years)
     years_to_show = [unique_years[0], unique_years[len(unique_years)//2], unique_years[-1]]
-    plot_colors = ['#1f77b4', '#2ca02c', '#d62728'] # Added missing ']' here
+    plot_colors = ['#1f77b4', '#2ca02c', '#d62728']
 
     for year, color in zip(years_to_show, plot_colors):
-        # Extract WBGT data directly for the specific year
         data_year = ds['WBGT'].sel(time=str(year)).values.flatten()
         data_clean = data_year[~np.isnan(data_year)]
 
