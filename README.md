@@ -49,13 +49,12 @@ file_path = '/content/drive/MyDrive/Group Project 2025/results/calculated_indice
 ```
 - **Step 2: Select Variable**
     - Update the variable key to the specific index you want to plot (e.g., `'TNn'`, `'TXx'`, `'WBGT'`, `'Tw'`).
+    - Also, update the variable key in other line to match the specific index
 ```
 # Change 'WBGT' or 'TNn' to your desired variable name found in the file
 tnn_data = fh.variables['TNn'][:]
 tw_data = ds['Tw']
 ```
-
-    - Also, update the variable key in other line to match the specific index
 
 ## Key Features
 The toolbox focuses on the following primary objectives:
