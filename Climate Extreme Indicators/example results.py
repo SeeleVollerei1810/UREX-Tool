@@ -30,7 +30,6 @@ fig = plt.figure(figsize=(16, 10))
 # --- SUBPLOT 1: SPATIAL DISTRIBUTION MAP ---
 ax1 = fig.add_subplot(1, 2, 1)
 
-# Using 'RdYlBu_r' as requested. For TNn, we set vmin/vmax to 2-20°C
 plot = ax1.pcolormesh(lon, lat, tnn_mean, cmap='RdYlBu_r', shading='auto', vmin=2, vmax=20)
 
 cbar = fig.colorbar(plot, ax=ax1, label='TNn Temperature (°C)', extend='both', shrink=0.7)
