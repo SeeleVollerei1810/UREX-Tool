@@ -14,6 +14,10 @@ First, clone the repository to your local machine or Google Colab environment:
 
 Ensure you have the required libraries installed:
 - pip install numpy pandas xarray netCDF4 matplotlib
+
+If you want to calculate Climate Indices or Heat Stress Metrics, navigate to the corresponding directory:
+- cd Climate Extreme Indicators
+- cd Heat-Stress Metrics
 ### 2. Configuration
 Before running, you must update the file paths and study area parameters to match your dataset.
 - **Step 1: Set Data Path**
