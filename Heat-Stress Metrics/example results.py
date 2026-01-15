@@ -71,7 +71,6 @@ def plot_existing_tw_analysis(file_path: str):
     plot_colors = ['#1f77b4', '#2ca02c', '#d62728']
 
     for year, color in zip(years_to_show, plot_colors):
-        # Extract Tw data directly for the specific year
         data_year = ds['Tw'].sel(time=str(year)).values.flatten()
         data_clean = data_year[~np.isnan(data_year)]
 
