@@ -39,6 +39,24 @@ def main():
 Use the provided `example_results.py` script to generate spatial maps and frequency distributions for any calculated index.
 - **Step 1: Update Input File**
     - Open `example results.py` and modify the `file_path` to point to your result NetCDF file (e.g., `calculated_indices.nc` or `calculated_heatstress.nc`).
+```
+# CHANGE THIS to YOUR result file path
+file_path = '/content/drive/MyDrive/Group Project 2025/results/calculated_indices.nc'
+```
+- **Step 2: Select Variable**
+    - Update the variable key to the specific index you want to plot (e.g., `'TNn'`, `'TXx'`, `'WBGT'`, `'Tw'`).
+```
+# Change 'WBGT' or 'TNn' to your desired variable name found in the file
+tnn_data = fh.variables['TNn'][:]
+heat_data = fh.variables['WBGT'][:]
+```
+- **Step 3: Adjust Color Scale**
+    - Modify `vmin` and `vmax` in the plotting function to match the physical range of your data.
+```
+# For Cold Indices (e.g., TNn): vmin=2, vmax=20
+# For Heat Stress (e.g., WBGT): vmin=20, vmax=35
+plot = ax1.pcolormesh(lon, lat, tnn_mean, cmap='RdYlBu_r', shading='auto', vmin=2, vmax=20)
+```
 
 ## Key Features
 The toolbox focuses on the following primary objectives:
