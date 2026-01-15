@@ -37,6 +37,8 @@ def main():
 ```
 ### 3. Visualization
 Use the provided ```example_results.py``` script to generate spatial maps and frequency distributions for any calculated index.
+- **Step 1: Update Input File**
+    - Open ```example results.py``` and modify the ```file_path``` to point to your result NetCDF file (e.g., ```calculated_indices.nc``` or ```calculated_heatstress.nc```).
 
 ## Key Features
 The toolbox focuses on the following primary objectives:
