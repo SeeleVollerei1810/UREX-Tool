@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import warnings
 
+file_path = '/content/drive/MyDrive/Group Project 2025/results/calculated_heatstress.nc'
+fh = Dataset(file_path, 'r')
+
 print(fh.file_format)
 print(fh.dimensions.keys())
 print(fh.dimensions['time'])
@@ -90,5 +93,4 @@ def plot_existing_tw_analysis(file_path: str):
     plt.show()
     ds.close()
 
-file_path = '/content/drive/MyDrive/Group Project 2025/results/calculated_heatstress.nc'
 plot_existing_tw_analysis(file_path)
