@@ -53,7 +53,7 @@ file_path = '/content/drive/MyDrive/Group Project 2025/results/calculated_indice
 ```
 # Change 'WBGT' or 'TNn' to your desired variable name found in the file
 tnn_data = fh.variables['TNn'][:]
-tw_data = ds['Tw']
+wbgt_data = ds['WBGT']
 ```
 
 ## Key Features
