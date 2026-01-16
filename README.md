@@ -55,7 +55,13 @@ file_path = '/content/drive/MyDrive/Group Project 2025/results/calculated_indice
 tnn_data = fh.variables['TNn'][:]
 wbgt_data = ds['WBGT']
 ```
-
+- **Note:**
+    - If you want to plot the precipitation indices, you need to add the following command.
+```
+tnn_mean = np.nanmean(tnn_data, axis=0)
+r95p_mean = np.ma.masked_where(r95p_mean <= 1, r95p_mean) #Add this line exactly here
+fig = plt.figure(figsize=(16, 10))
+```
 ## Key Features
 The toolbox focuses on the following primary objectives:
 - **Climate Extreme Indicators (ETCCDI):** Computing indices such as `TXx`, `TNn`, `R95p`, and `PRCPTOT` to assess long-term temperature and rainfall trends.
