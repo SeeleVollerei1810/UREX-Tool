@@ -2,7 +2,6 @@ import xarray as xr
 import numpy as np
 from typing import Tuple, Literal
 
-
 def normalize_temperature(ds: xr.Dataset) -> xr.Dataset:
     for var in ds.data_vars:
         if 'tas' in var.lower():
