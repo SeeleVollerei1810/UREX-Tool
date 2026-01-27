@@ -9,15 +9,14 @@ In the context of rapid urbanization and global warming, this toolbox provides a
 Follow these steps to set up the environment, configure your data, and obtain the results.
 ### 1. Installation
 First, clone the repository to your local machine or Google Colab environment:
-- git clone https://github.com/SeeleVollerei1810/Group_Project_2025.git
-- cd Group_Project_2025
+- !git clone https://github.com/SeeleVollerei1810/Group_Project_2025.git
 
 Ensure you have the required libraries installed:
 - pip install numpy pandas xarray netCDF4 matplotlib
 
 If you want to calculate Climate Indices or Heat Stress Metrics, navigate to the corresponding directory:
-- cd Climate Extreme Indicators
-- cd Heat-Stress Metrics
+- %cd '/content/Group_Project_2025/Climate Extreme Indicators'
+- %cd '/content/Group_Project_2025/Heat-Stress Metrics'
 ### 2. Configuration
 Before running, you must update the file paths and study area parameters to match your dataset.
 - **Step 1: Set Data Path**
