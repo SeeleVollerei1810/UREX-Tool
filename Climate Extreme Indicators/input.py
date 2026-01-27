@@ -15,7 +15,7 @@ def load_all_datasets_dynamically():
     for file_path in nc_files:
 
             name = Path(file_path).stem.split('_')[-1]
-            ds = xr.open_dataset(file_path)
+            ds = xr.open_dataset(file_path, chunks={'time': -1})
             datasets[name] = ds
 
     print("\nTotal number of datasets downloaded:", len(datasets))
