@@ -21,7 +21,7 @@ If you want to calculate Climate Indices or Heat Stress Metrics, navigate to the
 Before running, you must update the file paths and study area parameters to match your dataset.
 - **Step 1: Set Data Path**
     - Open `input.py` and locate the `get_drive_data_path` function.
-    - Change the `default_path` to the folder containing your .nc files:
+    - Change the `default_path` to the folder containing your .nc files.
 ```
 def get_drive_data_path() -> str:
     # CHANGE THIS to YOUR actual data folder path
@@ -30,7 +30,7 @@ def get_drive_data_path() -> str:
 ```
 - **Step 2: Set Study Area**
     - Open `main.py`, find the `main()` function and change the `OUTPUT_DIR` to the folder you want to save your results.
-    - Also, update the following coordinates:
+    - Also, update the following coordinates.
 ```
 def main():
     # CHANGE THIS to YOUR actual desired data folder path
