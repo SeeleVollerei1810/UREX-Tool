@@ -19,6 +19,7 @@ If you want to calculate Climate Indices or Heat Stress Metrics, navigate to the
 - %cd '/content/Group_Project_2025/Heat-Stress Metrics'
 ### 2. Configuration
 Make sure you run the code in the **Execution Order:** `input.py` &rarr; `main.py` &rarr; `example_results.py`
+
 Before running, you must update the file paths and study area parameters to match your dataset.
 - **Step 1: Set Data Path**
     - Open `input.py` and locate the `get_drive_data_path` function.
