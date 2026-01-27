@@ -17,7 +17,7 @@ def load_and_process_tas():
 
         if name == 'tas':
             print(f"Loading variable: {name}")
-            tas_ds = xr.open_dataset(file_path)
+            tas_ds = xr.open_dataset(file_path, chunks={'time': -1})
             break
 
     if tas_ds is not None:
